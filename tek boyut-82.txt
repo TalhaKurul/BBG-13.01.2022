@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+
+ 
+  	int n,i,sayi[100],toplam=0,ort,eksik;
+
+  	printf("Dizide kac eleman olacagini giriniz:");
+  	scanf("%d",&n);
+  	
+  	printf("Dizinin ortalamasini giriniz:");
+  	scanf("%d",&ort);
+  	
+	  	printf("Dizini eleman sayisinin 1 eksigi kadar eleman giriniz...\n");
+  	for(i=0; i<n-1; i++)
+	  {
+	  	printf("Dizinin %d. elemanini giriniz:",i);
+	  	scanf("%d",&sayi[i]);
+	  	toplam=toplam+sayi[i];
+		}  	
+		eksik=(ort*n)-toplam;
+  	printf("Dizinin eksik elemani %d dir",eksik);
+
+return 0;
+}

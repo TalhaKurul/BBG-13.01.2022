@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int b[100],k[100];
+int i,n,j;
+float ort;
+printf("Sayi Miktarini Giriniz=");
+scanf("%d",&n);
+
+float s[n],top=0.0;
+for(i=0,j=1;i<n ;i++,j++) {
+
+	printf("%d. Sayi=",j);
+	scanf("%f",&s[i]);
+	
+	top +=s[i];
+}
+ort=top/n;
+printf("Sonuc=%.2f\n\n",ort);
+
+for(i=0; i<n; i++)
+{
+	if(s[i]>ort)
+	{
+		b[i]=s[i];
+printf("Ortalamdan buyuk olan sayi dizisi: %d\n",b[i]);
+	}
+	
+	else
+	{
+	k[i]=s[i];
+	printf("Ortalamdan kucuk veya esit olan sayi: %d\n",k[i]);
+    }
+    
+}
+return 0;
+}
